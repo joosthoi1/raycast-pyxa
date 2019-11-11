@@ -125,22 +125,9 @@ void loop() {
         else {
             shade = 255;
         }
-
         Pyxa.drawLine(x,0,x,ceilingHeight-1,Pyxa.color565(255,255,255));
         Pyxa.drawLine(x,ceilingHeight,x,floorHeight,Pyxa.color565(shade,shade,shade));
         Pyxa.drawLine(x,floorHeight+1,x,screenHeight,Pyxa.color565(255,255,255));
-
-//        for (int y = 0; y < screenHeight; y++) {
-//            if (y < ceilingHeight) {
-//                Pyxa.drawPixel(x, y, Pyxa.color565(255, 255, 255));
-//            }
-//            else if (y > ceilingHeight and y <= floorHeight) {
-//                Pyxa.drawPixel(x, y, Pyxa.color565(shade, shade, shade));
-//            }
-//            else {
-//                Pyxa.drawPixel(x, y, Pyxa.color565(255, 255, 255));
-//            }
-//        }
     }
     boolean key_hit = false;
     while (!key_hit) {
